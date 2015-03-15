@@ -21,7 +21,7 @@ public class Health : MonoBehaviour {
 		gameObject.GetComponent<TopDownMovement>().enabled = false;
 
 		if (warnings <= 2 && swoon.GetComponent<SwoonLevel>().swoonCounter <= 9) {
-			audio.Play();
+			GetComponent<AudioSource>().Play();
 			wait.SetActive(true);
 			GameObject.Find ("Teacher").GetComponent<Seeking>().caught = true;
 			transform.rotation = Quaternion.identity;

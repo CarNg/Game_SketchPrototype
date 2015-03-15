@@ -30,7 +30,7 @@ public class Seeking : MonoBehaviour {
 				spin ();
 			}
 
-		if (transform.eulerAngles.z >= 358){
+		if (transform.eulerAngles.z >= 350){
 			transform.rotation = finish;
 			Radar.SetActive(false);
 			Seconds = Random.Range (minX, maxY);

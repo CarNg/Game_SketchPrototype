@@ -7,7 +7,7 @@ public class gameController : MonoBehaviour {
 	public GameObject Detention;
 
 	public void detention(){
-		audio.Stop ();
+		GetComponent<AudioSource>().Stop ();
 		GameObject.Find ("Teacher").GetComponent<Seeking>().enabled = false;
 		
 		GameObject.Find ("Heart").SetActive (false);
@@ -21,7 +21,7 @@ public class gameController : MonoBehaviour {
 	public GameObject PlayAgain;
 
 	public 	void win(){
-		audio.Stop ();
+		GetComponent<AudioSource>().Stop ();
 		GameObject.Find ("Hero").GetComponent<TopDownMovement>().enabled = false;
 		GameObject.Find ("Teacher").GetComponent<Seeking>().enabled = false;
 		

@@ -38,9 +38,9 @@ public class PickUpObjects : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D other) {
-		audio.Play();
+		GetComponent<AudioSource>().Play();
 		GameObject.Find ("Goal").GetComponent<Swoon> ().holding = true;
-		transform.position = new Vector3(7.4f, 5.5f, 0);
+		transform.position = new Vector3(7.4f, 5.18f, 0);
 	}
 
 }

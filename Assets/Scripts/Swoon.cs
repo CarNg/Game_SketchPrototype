@@ -8,7 +8,7 @@ public class Swoon : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.name == "Hero" && holding) {
-			audio.Play();
+			GetComponent<AudioSource>().Play();
 			GameObject.Find ("Swoon Bar").GetComponent<SwoonLevel>().swoon();
 			done = true;
 			holding = false;
